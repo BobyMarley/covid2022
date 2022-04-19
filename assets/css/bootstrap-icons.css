@@ -1,0 +1,38 @@
+.bi::before,
+[class*=" bi-"]::before,
+[class^=bi-]::before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale
+}
+
+.bi-list::before {
+  content: "\f479"
+}
+
+.bi-instagram::before {
+  content: "\f437"
+}
+
+.bi-linkedin::before {
+  content: "\f472"
+}
+
+.bi-facebook::before {
+  content: "\f344"
+}
+
+.bi-twitter::before {
+  content: "\f5ef"
+}
+
+.bi-arrow-up-short::before {
+  content: "\f145"
+}

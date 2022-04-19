@@ -1,5 +1,6 @@
 {
   "devDependencies": {
-    "eslint-plugin-html": "^6.2.0"
+    "eslint-plugin-html": "^6.2.0",
+    "gulp-uncss": "^1.0.6"
   }
 }

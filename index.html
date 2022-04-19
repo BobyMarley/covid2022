@@ -14,19 +14,45 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
+  <link rel="preload" href="assets/fonts/Raleway-Black-subset.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/Raleway-SemiBold-subset.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;600;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/new_bootstrap.min.css" rel="stylesheet">
+  <!--<link href="assets/css/bootstrap-icons.css" rel="stylesheet">-->
+  
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/style.css?ver=334" rel="stylesheet">
+  
+  <style>
+    @font-face {
+      font-family: 'Raleway-Black';
+      font-display: swap;
+      src: local('Raleway-Black'), url('assets/fonts/Raleway-Black-subset.woff2') format('woff2');
+      font-weight: 900;
+    }
+    @font-face {
+      font-family: 'Raleway-SemiBold';
+      font-display: swap;
+      src: local('Raleway-SemiBold'), url('assets/fonts/Raleway-SemiBold-subset.woff2') format('woff2');
+      font-weight: 600;
+    }
+
+    @font-face {
+      font-family: 'Raleway-Bold';
+      font-display: swap;
+      src: local('Raleway-Bold'), url('assets/fonts/Raleway-Bold-subset.woff2') format('woff2');
+      font-weight: 700;
+    }
+  </style>
+  
+ <!--[if IE]> <script>alert("К сожалению, Ваш браузер не поддерживается. Обновите до Microsoft Edge");</script> <![endif]-->
 
 </head>
 
@@ -37,12 +63,12 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!--<img src="assets/img/logo.png" alt="">-->
         <span>#Дапамога</span>
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
+          <span>#Дапамога</span>
           <li><a class="nav-link scrollto" href="#about_us">О проекте</a></li>
           <li><a class="nav-link scrollto" href="#our_spec">Наши специалисты</a></li>
           <li><a data-bs-toggle="modal" data-bs-target="#how_consult" href="#">Стать онлайн-консультантом</a></li>
@@ -59,12 +85,23 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-6 d-flex flex-column justify-content-center justify-content-center align-self-center">
-            <h2 data-aos="fade-up">Онлайн-помощь</h2>
-            <h2 data-aos="fade-up">пострадавшим от</h2>
+            
+            <div class="row">
+              <div class="col-lg-8">
+                <h2 data-aos="fade-up">Онлайн-помощь пострадавшим от</h2>
+               </div>
+            </div>
+            
             <h1 data-aos="fade-up" data-aos-delay="400">COVID</h1>
             <div class="row">
               <div class="col-lg-6">
-                <h3>Кому оказывается<br>помощь</h3>
+
+                <div class="row">
+                  <div class="col-lg-8 col-sm-12">
+                    <h3>Кому оказывается помощь</h3>
+                  </div>
+                </div>
+
                 <ul>
                   <li><span>Медицинские работники, пострадавшие от COVID-19</span></li>
                   <li><span>Люди, живущие с ВИЧ</span></li>
@@ -73,7 +110,13 @@
                 </ul>
               </div>
               <div class="col-lg-6">
-                <h3>Виды <br>помощи</h3>
+                
+                <div class="row">
+                  <div class="col-lg-4 col-sm-12">
+                    <h3>Виды помощи</h3>
+                  </div>
+                </div>
+                
                 <ul>
                   <li><span>Онлайн-консультация по вопросам здоровья и реабилитации</span></li>
                   <li><span>Онлайн-консультация по юридическим вопросам</span></li>
@@ -83,17 +126,7 @@
               </div>
             </div>
 
-            <div data-aos="fade-up" data-aos-delay="600">
-
-              <!--<div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
-                <span>Get Started</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>-->
-
-            </div>
-          </div>
+           </div>
           <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
             <img src="assets/img/main/header-pic.svg" class="img-fluid" alt="">
           </div>
@@ -109,7 +142,13 @@
       <div class="container" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <h1>Как получить<br> помощь онлайн</h1>
+            
+            <div class="row">
+              <div class="col-lg-8 col-sm-12">
+                <h1>Как получить помощь онлайн</h1>
+              </div>
+            </div>
+            
             <div class="help-table">
               <ol>
                 <li><em>Выберите специалиста,</em><br> в чьей помощи нуждаетесь</li>
@@ -130,38 +169,43 @@
               <div class="row g-5">
                 <div class="col-md-4">
                   <div class="card p-2 py-3 text-center">
-                    <div class="jimg mb-3" data-bs-toggle="modal" data-bs-target="#form_doc"><img src="./assets/img/main/doc1.svg" width="150"> </div>
+                    <div id="doc_all" class="img mb-3" data-bs-toggle="modal" data-bs-target="#form_doc"><img src="./assets/img/main/doc1.svg" width="150"> </div>
                     <div class="apointment">Врач общей<br> практики</div>
+                    <input type="hidden" name="Unnamed: 5" value="Врач общей практики">
                   </div>
                 </div>
 
                 <div class="col-md-4">
                   <div class="card p-2 py-3 text-center">
-                    <div class="img mt-2 mb-2"> <img src="./assets/img/main/doc2.svg" width="120"> </div>
+                    <div id="psy" class="img mt-2 mb-2" data-bs-toggle="modal" data-bs-target="#form_doc"> <img src="./assets/img/main/doc2.svg" width="120"> </div>
                     <div class="apointment">Психолог</div>
+                    <input type="hidden" name="Unnamed: 5" value="Психолог">
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card p-2 py-3 text-center">
-                    <div class="img mb-3"> <img src="./assets/img/main/doc3.svg" width="140"> </div>
+                    <div id="on_help" class="img mb-3" data-bs-toggle="modal" data-bs-target="#form_doc"> <img src="./assets/img/main/doc3.svg" width="140"> </div>
                     <div class="apointment">Онлайн<br>помощник</div>
+                    <input type="hidden" name="Unnamed: 5" value="Онлайн помощник">
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card p-2 py-3 text-center">
-                    <div class="img mt-1 mb-2"> <img src="./assets/img/main/doc4.svg" width="160"> </div>
+                    <div id="law" class="img mt-1 mb-2" data-bs-toggle="modal" data-bs-target="#form_doc"> <img src="./assets/img/main/doc4.svg" width="160"> </div>
                     <div class="apointment">Юрист</div>
+                    <input type="hidden" name="Unnamed: 5" value="Юрист">
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card p-2 py-3 text-center">
-                    <div class="img mt-1 mb-2"> <img src="./assets/img/main/doc5.svg" width="160"> </div>
+                    <div id="social" class="img mt-1 mb-2" data-bs-toggle="modal" data-bs-target="#form_doc"> <img src="./assets/img/main/doc5.svg" width="160"> </div>
                     <div class="apointment">Соцработник</div>
+                    <input type="hidden" name="Unnamed: 5" value="Соцработник">
                   </div>
                 </div>
                 <div class="col-md-4">
                   <div class="card-greenbg p-2 py-3 text-center">
-                    <div class="img mt-1 mb-2"> <img src="./assets/img/main/doc6.svg" width="140"> </div>
+                    <div class="img mt-1 mb-2" data-bs-toggle="modal" data-bs-target="#review"> <img src="./assets/img/main/doc6.svg" width="140"> </div>
                     <div class="apointment">Оставить<br>отзыв</div>
                   </div>
                 </div>
@@ -178,27 +222,63 @@
     <section id="about_us" class="about_us">
       <div class="container" data-aos="fade-up">
         <div class="row">
-          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-6 d-flex flex-column justify-content-center" id="about_prj" data-aos="fade-up" data-aos-delay="200">
             <h1>О проекте</h1>
             <div class="textcols">
-              <p>Почти все российские приложения,
-                подлежащие предустановке в России, могут передавать данные за границу,
-                сообщает "Коммерсант". Минцифры РФ и российские IT-компании это отрицают.</p>
+              <p>Социальный проект <strong>«Комплексная и устойчивая поддержка социально-уязвимых 
+                групп населения Республики Беларусь»</strong> направлен на поддержку уязвимых групп населения в связи с COVID-19.</p>
+              <p>Проект реализует Республиканское общественное объединение 
+                «Белорусская Ассоциация клубов ЮНЕСКО» при поддержке Министерства здравоохранения Республики Беларусь, совместно со Страновым офисом ЮНЭЙДС в Беларуси, 
+                а также организациями-партнерами из государственных и общественных социально-ориентированных организаций.</p>
+              <p>Помимо Минска проект будет реализован в Бресте, Витебске, Могилеве, Бобруйске, Пинске, 
+                Ляховичах на базе Кабинетов дружественных услуг и мультидисциплинарных команд.</p>
 
-              <p>Смартфон
-                Почти все российские приложения, подлежащие
-                с 1 апреля обязательной предустановке на продаваемые
-                в России телефоны и планшеты, Авторы исследования
-                проанализировали код 16 классов программ для Android и iOS.
-              </p>
-              <p>
-                в том числе приложения Mail.ru Group, "Яндекса", "Лаборатории Касперского",
-                а также "Госуслуги" и приложение российской платежной системы "Мир".
-                Оказалось, что встроенные механизмы слежки отсутствовали лишь
-                в приложении "Мир", а во всех остальных, в том числе </p>
+                <details class="details-animated">
+                  <summary id="sm1">Читать далее</summary>
+                  
+                  <h2>В рамках проекта запланирована следующая деятельность:</h2>
 
+                  <ul>
+                    <li>Организация работы колл-центров и телефонных «линий доверия» 
+                    по предоставлению круглосуточных мобильных и доступных услуг 
+                    для представителей уязвимых групп в Минске и в регионах.</li>
+                    <li>Разработка и апробация эффективной и устойчивой модели по оказанию 
+                    всеобъемлющей социальной и медико-реабилитационной помощи людям, живущим 
+                    с ВИЧ, и другим уязвимым группам населения.</li>
+                    <li>Расширение комплекса услуг по организации системы непрерывных, оперативных 
+                    и качественных медико-социальных и психолого-педагогических услуг нуждающимся гражданам, в том числе дистанционно через онлайн-доступ к консультациям у специалистов;</li>
+                    <li>Создание онлайн-платформы, обеспечивающей инновационное решение 
+                    для мобильного доступа людей к медико-социальным услугам в условиях COVID-19.</li>
+                    </ul>
+                    
+                    
+                    <h2>В рамках проекта первостепенная помощь будет оказана следующим группам:</h2>
+                    <ul>
+                    
+                    <li>уязвимые группы населения с высоким риском заражения ВИЧ и COVID-19;</li>
+                    <li>медицинский и обслуживающий персонал, пострадавший от последствий COVID-19;</li>
+                    <li>женщины, находящиеся в социально-опасном положении;</li>
+                    <li>люди, живущие с ВИЧ, употребляющие наркотики, имеющие тяжелые заболевания;</li>
+                    <li>люди без определенного места жительства;</li>
+                    <li>люди с ментальными расстройствами и инвалидностью;</li>
+                    <li>люди, вышедшие из мест лишения свободы;</li>
+                    <li>люди в тяжелой жизненной ситуации.</li>
+                    </ul>
+                    
+                    <p>Для справки: В 2020-2021 годах в Беларуси люди, живущие с ВИЧ, уязвимые 
+                    и ключевые группы в большей мере, чем другие категории населения, 
+                    подверглись воздействию сложного комплекса медицинских 
+                    и социально-экономических факторов эпидемии COVID-19, 
+                    что еще больше усугубило их положение, привело к расширению спектра уязвимости 
+                    и тяжести последствий. В условиях эпидемии возможность использования ресурсов 
+                    системы здравоохранения и социальных государственных служб для указанных групп 
+                    существенно сокращается, поскольку происходит переориентация ресурсов 
+                    государственных служб на борьбу с COVID-19.</p>
+                    
+              </details>
             </div>
           </div>
+
 
           <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
             <img src="assets/img/main/about_us.svg" class="img-fluid" alt="">
@@ -216,16 +296,16 @@
 
           </div>
 
-          <div class="row">
+          
 
             <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="200">
               <div class="swiper-wrapper">
 
                 <div class="swiper-slide">
-                  <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+                  <div class="testimonial-item data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                       <div class="member-img">
-                        <img src="assets/img/main/foto_doc_1.png" class="img-fluid" alt="">
+                        <img src="assets/img/main/foto_doc_1.webp" class="img-fluid" alt="">
                         <div class="social">
                           <a href=""><i class="bi bi-twitter"></i></a>
                           <a href=""><i class="bi bi-facebook"></i></a>
@@ -234,19 +314,18 @@
                         </div>
                       </div>
                       <div class="member-info">
-                        <h4>Людмила Васильевна Гринец</h4>
-                        <span>Врач общей практики</span>
-                        <span>Стаж работы: 20 лет</span>
+                        <h4>Юлия Мирзикян</h4>
+                        <p>Психолог, психотерапевт</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+                  <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                       <div class="member-img">
-                        <img src="assets/img/main/foto_doc_2.png" class="img-fluid" alt="">
+                        <img src="assets/img/main/foto_doc_2.webp" class="img-fluid" alt="">
                         <div class="social">
                           <a href=""><i class="bi bi-twitter"></i></a>
                           <a href=""><i class="bi bi-facebook"></i></a>
@@ -255,19 +334,18 @@
                         </div>
                       </div>
                       <div class="member-info">
-                        <h4>Павел Петрович<br> Синица</h4>
-                        <span>Врач общей практики</span>
-                        <span>Стаж работы: 20 лет</span>
+                        <h4>Мария Самусевич</h4>
+                        <p>Психолог, коуч</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="col-lg-10" data-aos="fade-up" data-aos-delay="100">
+                  <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
                     <div class="member">
                       <div class="member-img">
-                        <img src="assets/img/main/foto_doc_3.png" class="img-fluid" alt="">
+                        <img src="assets/img/main/foto_doc_3.webp" class="img-fluid" alt="">
                         <div class="social">
                           <a href=""><i class="bi bi-twitter"></i></a>
                           <a href=""><i class="bi bi-facebook"></i></a>
@@ -276,23 +354,62 @@
                         </div>
                       </div>
                       <div class="member-info">
-                        <h4>Александ Сергеевич Вишневский</h4>
-                        <span>Врач общей практики</span>
-                        <span>Стаж работы: 20 лет</span>
+                        <h4>Наталья Сапранова</h4>
+                        <p>Практикующий психолог</p>
                       </div>
                     </div>
                   </div>
                 </div>
+                
+                
+                <div class="swiper-slide">
+                  <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member">
+                      <div class="member-img">
+                        <img src="assets/img/main/foto_doc_4.webp" class="img-fluid" alt="">
+                        <div class="social">
+                          <a href=""><i class="bi bi-twitter"></i></a>
+                          <a href=""><i class="bi bi-facebook"></i></a>
+                          <a href=""><i class="bi bi-instagram"></i></a>
+                          <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                      </div>
+                      <div class="member-info">
+                        <h4>Екатерина Толстуха</h4>
+                        <p>Ведущий специалист-психолог</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="swiper-slide">
+                  <div class="testimonial-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member">
+                      <div class="member-img">
+                        <img src="assets/img/main/foto_doc_5.webp" class="img-fluid" alt="">
+                        <div class="social">
+                          <a href=""><i class="bi bi-twitter"></i></a>
+                          <a href=""><i class="bi bi-facebook"></i></a>
+                          <a href=""><i class="bi bi-instagram"></i></a>
+                          <a href=""><i class="bi bi-linkedin"></i></a>
+                        </div>
+                      </div>
+                      <div class="member-info">
+                        <h4>Наталья Домино</h4>
+                        <p>Психолог</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
               </div>
               <div class="swiper-pagination"></div>
             </div>
-
-          </div>
+          
         </div>
       </div>
     </section>
-
-
   </main>
 
   <!-- ======= Footer ======= -->
@@ -300,15 +417,15 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-          <ul class="nav">
-            <li><a href="#">Как записаться <br>на онлайн консультацию</a></li>
-            <li><a href="#">Наши специалисты</a></li>
-            <li><a href="#">О проекте</a></li>
+        <div class="col-lg-6 col-sm-12">
+          <ul class="nav user_accept">
+            <li><a class="scrollto" href="#online-help">Как получить помошь онлайн</a></li>            
+            <li><a class="user_accept__license" data-bs-toggle="user_license_agreement">Пользовательское соглашение</a></li>
+            <li><a class="user_accept__privacy" data-bs-toggle="privacy_policy">Политика конфиденциальности</a></li>
           </ul>
         </div>
-        <div class="col-lg-6">
-          <div class="credits">suppbelau.info © 2021</div>
+        <div class="col-lg-6 col-sm-12">
+          <div class="credits">help.belau.info © 2021</div>
         </div>
       </div>
 
@@ -323,7 +440,7 @@
 
   
 
-<!-- Modal -->
+<!-- Modal HowOnlineConsult -->
 <div class="modal fade" id="how_consult" tabindex="-1" aria-labelledby="how_consult" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -331,7 +448,7 @@
       <div class="modal-body">
         <h1 class="title">Как стать<br> онлайн-консультантом</h1>
         <p class="text">В рамках проекта для специалистов, которые бы хотели оказывать консультативные 
-      услуги онлайн, предлагаются обучающие курсы. Узнать подробнее и записаться можно <a href="#" class="">здесь.</a></p>
+      услуги онлайн, предлагаются обучающие курсы. Узнать подробнее и записаться можно <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTRYF_YY3HnSPaPwheUilf730L48W4UbSvCAC09M0MPJw_Mg/viewform" class="">здесь.</a></p>
       </div>
       <div class="modal-footer">
         <button class="btn btn-secondary btncls" data-bs-dismiss="modal">Закрыть окно</button>
@@ -344,50 +461,46 @@
   <!-- форма отправкі врачам-->
 
   <div class="modal fade" id="form_doc" tabindex="-1" aria-labelledby="form_doc" aria-hidden="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog modal-fullscreen-md-down">
       <div class="modal-content">
         
         <div class="modal-body">
           <h1 class="title">Заявка на оказание онлайн помощи<br></h1>
 
-          <form id="form" class="form_modal_window" action="assets/forms/form.php" method="POST">
+          <form id="form" class="form_modal_window" method="POST">
             <div class="row">
-              <div class="col-lg-12 mt-10">
+              <div class="col-lg-12">
                 <label for="name" class="form-label">Ваше имя</label>
-                <input type="text" tabindex="1" id="name_" name="name" placeholder="Ваше имя" required>
-                <button class="form_x_close" onclick="this.previousElementSibling.value = ''">&times;</button>
+                <input type="text" id="name_" name="Unnamed: 1" placeholder="Ваше имя" required autocomplete="none">                
               </div>
               
-              <div class="col-lg-12 mt-10">
-                <label for="age" class="form-label">Ваш возраст</label>
-                <input type="number" tabindex="2" id="age_" name="age" placeholder="Укажите Ваш возраст" required>
-                <button class="form_x_close" onclick="this.previousElementSibling.value = ''">&times;</button>
-              </div>
-                
-              <div class="col-lg-12 mt-10">
+              <div class="col-lg-12">
                 <label for="phone" class="form-label">Ваш номер телефона для обратной связи</label>
-                <input type="tel" tabindex="3" name="phone" placeholder="Ваш номер телефона" required>
-                <button class="form_x_close" onclick="this.previousElementSibling.value = ''">&times;</button>
+                <input type="tel" name="Unnamed: 3" placeholder="Ваш номер телефона" required autocomplete="none">
+                
               </div>
                 
-              <div class="col-lg-12 mt-10">
+              <div class="col-lg-12">
                 <label for="email" class="form-label">Ваш email</label>
-                <input type="email" tabindex="4" name="email" placeholder="Ваш email" required>
-                <button class="form_x_close" onclick="this.previousElementSibling.value = ''">&times;</button>
+                <input type="email" name="Unnamed: 4" placeholder="Ваш email" required autocomplete="none">
+                
               </div>
                 
-              <div class="col-lg-12 mt-10">
+              <div class="col-lg-12">
                 <label for="description" class="form-label">Ваш вопрос: краткое описание проблемы и в чем нужна помощь</label>
-                <textarea type="text" tabindex="5" name="description" rows="5" cols="33" placeholder="Краткое описание проблемы и в чем нужна помощь" required></textarea>
-                <button class="form_x_close" onclick="this.previousElementSibling.value = ''">&times;</button>
-              </div>
+                <textarea type="text" name="Unnamed: 6" rows="5" cols="33" placeholder="Краткое описание проблемы и в чем нужна помощь" required></textarea>
                 
-              
-
+              </div>
+              <input id="doc_cor" type="hidden" name="Unnamed: 5">
+              <input type="hidden" name="Unnamed: 2" id="theDate">
+              <input type="hidden" name="project_name" value="Дапамога Covid2022">
+              <input type="hidden" name="admin_email"  value="plenkanet@gmail.com">
+              <input type="hidden" name="form_subject" value="Форма">      
+                
               <div class="modal-footer">
                 
-                <button type="button" class="btn btn-secondary mt--1 mb-1" data-bs-dismiss="modal">Отмена</button>
-                <button class="form_sub mt--1 mb-1" type="submit" value="ОТПРАВИТЬ">Отправить заявку</button>
+                <button type="button" class="btn btn-secondary mt-1 mb-1" data-bs-dismiss="modal">Отмена</button>
+                <button class="btn btn-primary mt-1 mb-1" type="submit" value="ОТПРАВИТЬ">Отправить заявку</button>
                 
                </div>
               
@@ -398,41 +511,117 @@
     </div>
   </div>
 
+  <!-- Modal Tnks -->
+<div class="modal fade" id="tnks" tabindex="-1" aria-labelledby="tnks" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <p class="text">Спасибо за обращение к нам! Консультант свяжется с Вами в ближайшее время.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary btncls" data-bs-dismiss="modal">Закрыть окно</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="tnks_review" tabindex="-1" aria-labelledby="tnks_review" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+        <p class="text">Спасибо за Ваш отзыв!</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary btncls" data-bs-dismiss="modal">Закрыть окно</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!-- ReviewForm-->
+ <div class="modal fade" id="review" aria-labelledby="review" aria-hidden="true">
+  <div class="modal-dialog modal-fullscreen-md-down">
+    <div class="modal-content">
+      <div class="modal-body">
+        <h1 class="title">Оставить отзыв</h1>
+
+        <form id="form" class="form_modal_window" method="POST" autocomplete="off">
+          <div class="row">
+            <div class="col-lg-12">
+              <label for="name" class="form-label">Ваше имя</label>
+              <input type="text" id="name_" name="name" placeholder="Ваше имя" required autocomplete="none">
+              
+            </div>
+              
+            <div class="col-lg-12">
+              <label for="email" class="form-label">Ваш email</label>
+              <input type="email" name="email" placeholder="Ваш email" required autocomplete="none">
+              
+            </div>
+              
+            <div class="col-lg-12">
+              <label for="description" class="form-label">Ваш вопрос: краткое описание проблемы и в чем нужна помощь</label>
+              <textarea type="text" name="description" rows="5" cols="33" placeholder="Краткое описание проблемы и в чем нужна помощь" required></textarea>
+              
+            </div>
+            <input type="hidden" name="project_name" value="Дапамога Covid2022">
+            <input type="hidden" name="admin_email"  value="plenkanet@gmail.com">
+            <input type="hidden" name="form_subject" value="Форма">      
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary mt-1 mb-1" data-bs-dismiss="modal">Отмена</button>
+              <button class="btn btn-primary mt-1 mb-1" type="submit" value="submit">Отправить отзыв</button>
+             </div>
+            
+          </div>  
+         </form>
+      </div>
+     </div>
+  </div>
+</div>
 
  
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+    
+  <script src="assets/js/mini/data.js"></script>
+  <script src="assets/js/mini/event-handler.js"></script>
+  <script src="assets/js/mini/manipulator.js"></script>
+  <script src="assets/js/mini/selector-engine.js"></script>
+  <script src="assets/js//mini/base-component.js"></script>
+  <script src="assets/js/mini/modal.js"></script>
+  <script src="assets/js/mini/jquery-wrap.min.js"></script>
   
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/modal.js"></script>
  
+  <!-- Quickley.Chat -->
+  <script>
+        
+    (function(d, w, q) {
+        w.QCHAT_ID = 'RrGNsY9yKBFyUbnLW3Tir';
+        w[q] = w[q] || function() {
+            (w[q].q = w[q].q || []).push(arguments);
+        };
+        var l = function () {
+            var s = d.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = 'https://quickley.chat/chat.js';
+            var x = d.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+        };
+        if (w.attachEvent) {
+            w.attachEvent('onload', l);
+        } else {
+            w.addEventListener('load', l, false);
+        }
+    })(document, window, 'Quickley');
 
-<script>
-   var forms = document.querySelectorAll("form");
-
-function submit() {
-  var request = new XMLHttpRequest();
-  request.onload = function () {
-    if (request.status == 200) {
-      alert("Thank you!")
-    }
-  };
-  request.open(this.method, this.action, true);
-  request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-  var name = this.querySelector('[name="name"]');
-  var city = this.querySelector('[name="city"]');
-  request.send('name=' + encodeURIComponent(name.value) + '&city='  + encodeURIComponent(city.value));
-  return false;
-}
-
-for (var i = 0; i < forms.length; i++) {
-  forms[i].onsubmit = submit;
-}
 </script>
-
+<!-- /Quickley.Chat -->
+  
 </body>
-
 </html>

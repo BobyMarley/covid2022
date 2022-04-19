@@ -1,43 +1,40 @@
 <?php
-/*ПОМЕЩАЕМ ДАННЫЕ ИЗ ПОЛЕЙ В ПЕРЕМЕННЫЕ*/
+$method = $_SERVER['REQUEST_METHOD'];
+$c = true;
 
-$name = $_POST["name"];
-$email = $_POST["email"];
-$tel = $_POST["phone"];
+$project_name = trim($_POST["project_name"]);
+$admin_email  = trim($_POST["admin_email"]);
+$form_subject = trim($_POST["form_subject"]);
 
-
-/*ЗДЕСЬ ПРОВЕРЯЕМ ЕСЛИ ХОТЯ БЫ ОДНО ИЗ ПОЛЕЙ НЕ ЗАПОЛНЕНО МЫ ВОЗВРАЩАЕМ СООБЩЕНИЕ*/
-if($name=="" or $email=="" or $tel==""){
-    echo "Заполните все поля";
+foreach ( $_POST as $key => $value ) {
+  if ( is_array($value) ) {
+    $value = implode(", ", $value);
+  }
+  if ( $value != "" && $key != "project_name" && $key != "admin_email" && $key != "form_subject" ) {
+    $message .= "
+    " . ( ($c = !$c) ? '<tr>':'<tr style="background-color: #f8f8f8;">' ) . "
+      <td style='padding: 10px; border: #e2dddd 1px solid;'><b>$key</b></td>
+      <td style='padding: 10px; border: #e2dddd 1px solid;'>$value</td>
+    </tr>
+    ";
+  }
 }
 
-else{
-    /*ЕСЛИ ВСЕ ПОЛЯ ЗАПОЛНЕНЫ НАЧИНАЕМ СОБИРАТЬ ДАННЫЕ ДЛЯ ОТПРАВКИ*/
-    $to = "your_mail@mail.ru"; /* Адрес, куда отправляем письма*/
-    $subject = "Письмо с обратной связи"; /*Тема письма*/
-    $headers = "MIME-Version: 1.0\r\n";
-    $headers .= "Content-type: text/html; charset=utf-8\r\n";
-    $headers .= "From: <test@mail.ru>\r\n";/*ОТ КОГО*/
+$message = "<table style='width: 100%;'>$message</table>";
 
-    /*ВО ВНУТРЬ ПЕРЕМЕННОЙ $message ЗАПИСЫВАЕМ ДАННЫЕ ИЗ ПОЛЕЙ */
-    $message .= "Имя пользователя: ".$name."\n";
-    $message .= "Почта: ".$email."\n";
-    $message .= "Телефон: ".$tel."\n";
-
-    /*ДЛЯ ОТЛАДКИ ВЫ МОЖЕТЕ ПРОВЕРИТЬ ПРАВИЛЬНО ЛИ ЗАПИСАЛИCM ДАННЫЕ ИЗ ПОЛЕЙ*/
-    //print_r($message);
-
-    $send = mail($to, $subject, $message, $headers);
-
-    /*ЕСЛИ ПИСЬМО ОТПРАВЛЕНО УСПЕШНО ВЫВОДИМ СООБЩЕНИЕ*/
-    if ($send == "true")
-    {
-        echo "<p style='color: green;'>Ваше сообщение отправлено. Мы ответим вам в ближайшее время.\r\n</p>";
-    }
-    /*ЕСЛИ ПИСЬМО НЕ УДАЛОСЬ ОТПРАВИТЬ ВЫВОДИМ СООБЩЕНИЕ ОБ ОШИБКЕ*/
-    else
-    {
-        echo "<p style='color: red;'>Не удалось отправить, попробуйте снова!</p>";
-    }
+function adopt($text) {
+    return '=?UTF-8?B?'.Base64_encode($text).'?=';
 }
-?>
+
+$headers = "MIME-Version: 1.0" . PHP_EOL .
+"Content-Type: text/html; charset=utf-8" . PHP_EOL .
+'From: '.adopt($project_name).' <'.$admin_email.'>' . PHP_EOL .
+'Reply-To: '.$admin_email.'' . PHP_EOL;
+
+if (mail($admin_email, adopt($form_subject), $message, $headers )) {
+    http_response_code(200);
+    echo "Данные отправлены.";
+} else {
+    http_response_code(400);
+    echo "Ошибка. Данные не отправлены.";
+};
